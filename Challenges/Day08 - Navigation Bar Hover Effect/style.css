@@ -1,0 +1,90 @@
+body {
+    height: 100vh;
+    display: inline;
+    font: 18px 'Nunito', sans-serif;
+    color: rgb(42, 1, 109);
+	background-color: dimgray;
+}
+
+
+main {    
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 80vw;
+	border: solid 4px  black;
+	border-style:dotted;
+	padding: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav ul li {
+    position: relative;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font: 17px 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 10px 15px;
+    z-index: 1;
+}
+
+nav ul li:before {
+    content: '';
+    position: absolute;
+    height: 33.33%;
+    width: 0;    
+    background-color: #000000;
+    right: 0;
+    z-index: 0;
+    top: 33.33%;
+    transition: all .5s;
+}
+
+nav ul li:after {
+    content: '';
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: #000000;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    transition: all .5s;
+}
+
+nav ul li a:before {
+    content: '';
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: #000000;
+    bottom: 66.66%;
+    left: 0;
+    transition: all .5s;
+}
+
+nav ul li:hover:before,
+nav ul li:hover:after,
+nav ul li:hover a::before {
+    width: 100%;
+}
+
